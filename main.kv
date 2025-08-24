@@ -1,0 +1,75 @@
+#: import CircularRippleBehavior kivymd.uix.behaviors.CircularRippleBehavior
+<IconListItem>
+
+	IconLeftWidget:
+
+		icon: root.icon
+		ripple_scale: 0
+
+MDScreen:
+	md_bg_color: rgba(232,234,246,255)
+	MDBoxLayout:
+		orientation: 'vertical'
+		padding: 0,10,0,0
+		spacing: 10					
+		DisplayScreen:
+			size_hint_x: .98
+			size_hint_y: None
+			height: dp(290)
+			
+			pos_hint: {'center_x':.5}
+			md_bg_color:rgba(232,245,233,255)#1,1,1,1			
+			elevation: .5
+			
+			TextInput:
+				id: display
+				disabled: True
+				halign: 'right'
+				size_hint: .98,.97
+				pos_hint: {'center_x':.5,'center_y':.5}
+				cursor_height: '5sp'
+				multiline: False
+				font_size: "48sp"
+				padding: 25,110
+				cursor_color: 0,0,0,0.5
+				cursor_width: '5sp'
+				background_color: 0,0,0,0
+				
+			MDIconButton:
+				id: button
+				icon: 'dots-vertical'
+				pos_hint: {'center_x':.96,'center_y':.90}
+				on_release: app.open_menu()
+				
+		KeyPard:
+			id:keypad
+			pos_hint: {'center_x':.5}
+			size_hint_x: .99
+			
+			elevation: 0
+			#md_bg_color: 1,1,1,1
+			
+			spacing: 2
+			
+			cols: 4
+			
+			
+			
+
+<CircularRippleButton>
+	#ripple_scale = .25
+	
+	MDLabel:
+		text: root.text
+		size_hint: .88,.88
+		pos_hint: {"center_x": .5, "center_y": .5}
+
+		halign: 'center'
+		valign: 'center'
+		font_size: '30sp'
+						
+<DisplayScreen@MDFloatLayout+FakeRectangularElevationBehavior>
+
+<KeyPard@MDGridLayout+FakeRectangularElevationBehavior>
+	#size_hint_y: None
+	#height: self.minimum_height
