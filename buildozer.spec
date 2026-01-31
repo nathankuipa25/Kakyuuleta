@@ -1,25 +1,25 @@
 [app]
 
 # (str) Title of your application
-title = Kitchen Sink
+title = Kakyoo
 
 # (str) Package name
-package.name = kitchensink
+package.name = KakyooApp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.kivymd.kitchensink
+package.domain = org.nattix.kakyoo
 
 # (str) Source code where the main.py live
 source.dir = .
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = assets/*
+#source.include_patterns = assets/*
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/assets/images/presplash.png
+#presplash.filename = %(source.dir)s/assets/images/presplash.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/assets/images/favicon.png
+#icon.filename = %(source.dir)s/assets/images/favicon.png
 
 # (string) Presplash background color (for android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
@@ -37,7 +37,7 @@ source.include_exts = py, gif, png, jpg, jpeg, ttf, kv, json, txt, md
 # android.enable_androidx = True
 
 # (str) Application versioning (method 2)
-version = 1.1.2
+version = 1.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
@@ -65,7 +65,7 @@ android.skip_update = False
 android.accept_sdk_license = True
 
 # (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
-android.archs = armeabi-v7a, arm64-v8a
+android.archs = arm64-v8a
 
 android.release_artifact = aab
 
